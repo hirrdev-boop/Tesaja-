@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>WASender Pro - Solusi WA Marketing Legal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #cbd5e6;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #25D366;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      background: #25D36620;
+      border-left: 4px solid #25D366;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #25D366;
+      color: #0f172a;
+      padding: 0.85rem 2rem;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: #20b859;
+      transform: scale(1.02);
+    }
+
+    .btn-outline {
+      border: 1px solid #475569;
+      background: transparent;
+      padding: 0.85rem 2rem;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #cbd5e6;
+      transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: #25D366;
+      color: #25D366;
+    }
+
+    /* CARD GENERATOR */
+    .card {
+      background: #1e293b;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.5);
+      border: 1px solid #334155;
+    }
+
+    .generator-box {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .generator-box h2 {
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .input-group {
+      margin: 1.5rem 0;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #cbd5e6;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 20px;
+      color: white;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #25D366;
+      box-shadow: 0 0 0 3px #25D36630;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .wa-link-result {
+      background: #0f172a;
+      padding: 1rem;
+      border-radius: 20px;
+      word-break: break-all;
+      margin: 1rem 0;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+
+    .btn-wa {
+      background: #25D366;
+      color: #0f172a;
+      width: 100%;
+      padding: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* FITUR */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 5rem 0;
+      justify-content: center;
+    }
+
+    .feature-item {
+      background: #1e293b;
+      padding: 1.8rem;
+      border-radius: 28px;
+      flex: 1;
+      min-width: 220px;
+      transition: 0.2s;
+      border: 1px solid #334155;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      border-color: #25D36650;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* TESTI */
+    .testimonial {
+      background: #0f172a;
+      border-radius: 28px;
+      padding: 2rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #334155;
+      color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+      .nav-links {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">WA<span style="color:#25D366;">Sender</span> Pro</div>
+    <div class="nav-links">
+      <a href="#">Beranda</a>
+      <a href="#">Fitur</a>
+      <a href="#">Harga</a>
+      <a href="#">Blog</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-text">
+      <div class="badge">
+        ✅ 100% Legal • Pakai Official WhatsApp API
+      </div>
+      <h1>Kirim Pesan WhatsApp Tanpa Spam, <span style="color:#25D366;">Cuan Maksimal</span></h1>
+      <p>Bangun bisnis dengan marketing etis. Dukung pertumbuhan usaha tanpa resiko blokir. Solusi untuk agen properti, UMKM, edukasi, dan jasa profesional.</p>
+      <div class="btn-group">
+        <a href="#generator" class="btn-primary">🟢 Coba Link Generator</a>
+        <a href="#" class="btn-outline">📞 Konsultasi Gratis</a>
+      </div>
+    </div>
+    <div style="flex:1; min-width: 260px;">
+      <div class="card generator-box" id="generator">
+        <h2>⚡ WA Link Generator</h2>
+        <p style="color:#94a3b8; margin-bottom: 1rem;">Buat link 1 klik ke chat WA (tanpa blast otomatis)</p>
+        <div class="input-group">
+          <label>📱 Nomor WhatsApp (contoh: 628123456789)</label>
+          <input type="tel" id="phoneNumber" placeholder="628123456789" value="628123456789">
+        </div>
+        <div class="input-group">
+          <label>💬 Pesan Otomatis (opsional)</label>
+          <textarea id="messageText" placeholder="Halo, saya tertarik dengan layanan Anda..."></textarea>
+        </div>
+        <div class="wa-link-result" id="linkResult">
+          wa.me/628123456789?text=Halo...
+        </div>
+        <button class="btn-wa" id="generateBtn">🔗 Generate Link & Buka WA</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fitur unggulan -->
+  <h2 style="text-align:center; margin: 2rem 0 0.5rem;">✨ Cuan dengan Cara Legal</h2>
+  <div class="features">
+    <div class="feature-item">
+      <div class="feature-icon">📊</div>
+      <h3>Broadcast Resmi</h3>
+      <p>Integrasi WhatsApp Business API dengan template pesan tersetujui.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🤖</div>
+      <h3>Auto-reply Cerdas</h3>
+      <p>Balas otomatis berdasarkan kata kunci, ramah konversi.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">💰</div>
+      <h3>Retargeting Etis</h3>
+      <p>Kirim promosi hanya ke pelanggan yang opt-in → cuan berkelanjutan.</p>
+    </div>
+  </div>
+
+  <!-- Testimoni -->
+  <div class="testimonial">
+    <p style="font-size: 2rem; margin-bottom: 1rem;">“</p>
+    <p style="font-style: italic; font-size: 1.2rem;">Dulu pakai blast WA abal-abal, nomor kena blokir. Sekarang pakai metode legal, konversi naik 3x lipat tanpa takut banned!</p>
+    <p style="margin-top: 1rem; font-weight: bold;">— Dimas, Owner Properku</p>
+  </div>
+
+  <!-- Peringatan edukasi -->
+  <div style="background: #0f172a; border-radius: 24px; padding: 1.8rem; border-left: 6px solid #f59e0b;">
+    <h3 style="color: #fbbf24;">⚠️ Penting (Biar Cuan Beneran)</h3>
+    <p style="margin-top: 0.5rem;">WhatsApp melarang blast WA otomatis tanpa izin. Website ini hanya membuat link WA (satu klik) & memberikan edukasi marketing legal. Untuk bisnis skala besar, gunakan <strong>WhatsApp Business API resmi</strong> melalui partner Meta. Jangan pernah beli database atau spam — itu merusak reputasi & cuan instan sirna.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 WASender Pro — Solusi WhatsApp Marketing Etis & Menguntungkan</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">🇮🇩 Dibuat dengan 💚 untuk pebisnis cerdas</p>
+  </footer>
+</div>
+
+<script>
+  // WA Link Generator murni (ke wa.me, bukan blast massal)
+  const phoneInput = document.getElementById('phoneNumber');
+  const messageInput = document.getElementById('messageText');
+  const linkResultDiv = document.getElementById('linkResult');
+  const generateBtn = document.getElementById('generateBtn');
+
+  function sanitizePhone(raw) {
+    let cleaned = raw.replace(/\D/g, '');
+    if (cleaned.startsWith('0')) {
+      cleaned = '62' + cleaned.substring(1);
+    }
+    if (!cleaned.startsWith('62')) {
+      cleaned = '62' + cleaned;
+    }
+    return cleaned;
+  }
+
+  function encodeMessage(msg) {
+    return encodeURIComponent(msg);
+  }
+
+  function updateLink() {
+    let phoneRaw = phoneInput.value.trim();
+    if (phoneRaw === "") {
+      phoneRaw = "628123456789";
+    }
+    const phone = sanitizePhone(phoneRaw);
+    let message = messageInput.value;
+    let url = `https://wa.me/${phone}`;
+    if (message.trim() !== "") {
+      url += `?text=${encodeMessage(message)}`;
+    }
+    linkResultDiv.innerHTML = `<span style="color:#25D366;">🔗 Link WA siap pakai:</span><br>${url}`;
+    return url;
+  }
+
+  phoneInput.addEventListener('input', updateLink);
+  messageInput.addEventListener('input', updateLink);
+
+  generateBtn.addEventListener('click', () => {
+    const url = updateLink();
+    window.open(url, '_blank');
+  });
+
+  // Set default contoh pesan ramah
+  messageInput.value = "Halo! Saya tertarik dengan layanan WhatsApp marketing legal. Info lebih lanjut dong 🙏";
+  updateLink();
+</script>
+</body>
+</html>
